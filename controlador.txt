@@ -1,0 +1,28 @@
+		$this->validate($request,[
+			'estamento'=>'required',
+			'grado'=>'required',
+			'transporte'=>'required',
+			'comuna.*'=>'required',
+			'fecha_inicio'=>'required',
+			'fecha_termino'=>'required',
+			'hora_salida'=>'required',
+			'hora_regreso'=>'required',
+			'motivo'=>'required|max:255',
+			'dias_total'=>'required|integer|min:1'
+		],
+		[
+			'estamento.required'=>'Debe Seleccionar Estamento',
+			'grado.required'=>'Debe Seleccionar Grado',
+			'transporte.required'=>'Debe Seleccionar al Menos un Transporte',
+			'comuna.*.required'=>'Destino sin Seleccionar',
+			'fecha_inicio.required'=>'Debe Ingresar Fecha Desde',
+			'fecha_termino.required'=>'Debe Ingresar Fecha Hasta',
+			'hora_salida.required'=>'Debe Ingresar Hora de Salida',
+			'hora_regreso.required'=>'Debe Ingresar Hora de Regreso',
+			'motivo.required'=>'Debe Registrar Motivo',
+			'dias_total.required'=>'Debe Ingresar Dias',
+			'dias_total.integer'=>'Debe Ingresar Numero de Dias',
+			'motivo.max'=>'El motivo no puede superar los 255 caracteres',
+
+			
+		]);	
